@@ -1,3 +1,3 @@
 # HermitSun's blog
 
-Deployed to wensun.today.
+Deployed to [wensun.today](https://wensun.today/).
