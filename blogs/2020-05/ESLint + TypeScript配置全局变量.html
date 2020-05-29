@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ESLint + TypeScript配置全局变量 | HermitSun</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="未能免俗，聊复尔耳">
+    <link rel="preload" href="/assets/css/0.styles.8fbd8908.css" as="style"><link rel="preload" href="/assets/js/app.1f794f11.js" as="script"><link rel="preload" href="/assets/js/2.266c3758.js" as="script"><link rel="preload" href="/assets/js/9.d2fee785.js" as="script"><link rel="prefetch" href="/assets/js/10.4ecca50a.js"><link rel="prefetch" href="/assets/js/11.cf7c2832.js"><link rel="prefetch" href="/assets/js/12.9fa159a8.js"><link rel="prefetch" href="/assets/js/13.2f257f4f.js"><link rel="prefetch" href="/assets/js/14.0389e76b.js"><link rel="prefetch" href="/assets/js/15.9986d71d.js"><link rel="prefetch" href="/assets/js/16.433e292b.js"><link rel="prefetch" href="/assets/js/17.005b0fd8.js"><link rel="prefetch" href="/assets/js/18.fed32ea8.js"><link rel="prefetch" href="/assets/js/19.3e9059ef.js"><link rel="prefetch" href="/assets/js/20.bee97b50.js"><link rel="prefetch" href="/assets/js/21.1e1792f5.js"><link rel="prefetch" href="/assets/js/22.d46a1c98.js"><link rel="prefetch" href="/assets/js/3.39ffa65b.js"><link rel="prefetch" href="/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/assets/js/5.c9806e61.js"><link rel="prefetch" href="/assets/js/6.a15f72d3.js"><link rel="prefetch" href="/assets/js/7.30b3b1ad.js"><link rel="prefetch" href="/assets/js/8.d8b9db1e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.8fbd8908.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">HermitSun</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://blog.csdn.net/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://www.yuque.com/yunwuxin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="https://github.com/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://blog.csdn.net/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://www.yuque.com/yunwuxin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-04/" class="sidebar-heading clickable"><span>2020-04</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-05/" class="sidebar-heading clickable router-link-active open"><span>2020-05</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blogs/2020-05/ESLint + TypeScript配置全局变量.html" class="active sidebar-link">ESLint + TypeScript配置全局变量</a></li><li><a href="/blogs/2020-05/pow函数有四样写法，你知道吗.html" class="sidebar-link">pow函数有四样写法，你知道吗</a></li><li><a href="/blogs/2020-05/Ubuntu 18.04升级systemctl（systemd）到v245.html" class="sidebar-link">Ubuntu 18.04升级systemctl（systemd）到v245</a></li><li><a href="/blogs/2020-05/Windows 10环境下V8引擎的编译方法.html" class="sidebar-link">Windows 10环境下V8引擎的编译方法</a></li><li><a href="/blogs/2020-05/前端可能用到的工具的代理设置方法.html" class="sidebar-link">前端可能用到的工具的代理设置方法</a></li><li><a href="/blogs/2020-05/在nuxt中使用keep-alive的两种可能方案.html" class="sidebar-link">在nuxt中使用keep-alive的两种可能方案</a></li><li><a href="/blogs/2020-05/在Vue项目中导入外部字体的注意点.html" class="sidebar-link">在Vue项目中导入外部字体的注意点</a></li><li><a href="/blogs/2020-05/精读EMCAScript规范：完成记录.html" class="sidebar-link">精读EMCAScript规范：完成记录（Completion Record）</a></li><li><a href="/blogs/2020-05/精读EMCAScript规范：截断.html" class="sidebar-link">精读EMCAScript规范：截断</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notes/需求与商业模式创新/" class="sidebar-heading clickable"><span>需求与商业模式创新</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="eslint-typescript配置全局变量"><a href="#eslint-typescript配置全局变量" class="header-anchor">#</a> ESLint + TypeScript配置全局变量</h1> <p>其实ESLint + TypeScript的组合还是挺香的，代码风格检查 + 类型检查，能省下不少时间。</p> <p>但是还是存在一些问题。比如，有时候为了减小打包大小，我们可能会选择把一些不太关键的依赖放到CDN上，然后再通过<code>&lt;script&gt;</code>来异步加载，这种脚本一般都会采用注入变量的方式来进行加载，这个时候就很麻烦。比如，我通过<code>&lt;script&gt;</code>加载了d3，但是在使用的时候，就会报错：</p> <div class="language- extra-class"><pre class="language-text"><code>ESLint: 'd3' is not defined.(no-undef)
+TS2686: 'd3' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+</code></pre></div><p>解决起来也还比较简单。首先处理一下ts，给ts加一个类型声明文件来扩展全局变量。<a href="https://blog.csdn.net/HermitSun/article/details/104104762" target="_blank" rel="noopener noreferrer">之前我曾经写过相关的文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>，在这里重复一下。为了方便（并不代表应该写成<code>any</code>，只是为了方便），在这里就暂时用一下<code>any</code>：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token comment">// shims-global.d.ts</span>
+<span class="token keyword">export</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">declare</span> global <span class="token punctuation">{</span>
+  <span class="token keyword">interface</span> <span class="token class-name">Window</span> <span class="token punctuation">{</span>
+    d3<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">const</span> d3<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>为什么第一行要写个<code>export</code>？因为ts的模块机制，需要通过这个<code>export</code>让编译器意识到这是一个模块。在之前的文章里也有相应的解释。</p> <p>然后就是配置ESLint。网上目前主要是两种写法：</p> <ol><li><p>直接在rules里off掉这条规则。我觉得为了一个变量而关掉这项检查，不是一个很好的方案。</p></li> <li><p>在<code>.eslintrc.js</code>里加这么一段：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  globals<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string">'echarts'</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>可以是可以，但是总觉得有点奇怪。为什么后面是个<code>true</code>呢？</p></li></ol> <p>所以我去查了文档，文档上提供了好几种写法，在这里选两个常用的：</p> <ol><li><p>通过注释声明，只在当前文件生效。</p> <p>最简单的写法如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* global var1, var2 */</span>
+</code></pre></div><p>还可以对全局变量的读写权限进行更细粒度的控制。写法如下：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">/* global var1:writable, var2:writable */</span>
+</code></pre></div></li> <li><p>在<code>.eslintrc.js</code>进行配置，对整个项目都生效。</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  globals<span class="token operator">:</span> <span class="token punctuation">{</span>
+    var1<span class="token operator">:</span> <span class="token string">'writable'</span><span class="token punctuation">,</span>
+    var2<span class="token operator">:</span> <span class="token string">'readonly'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>在这种写法里，off是有特殊含义的，可以“屏蔽”原生的全局变量。比如，我不希望组里的其他人直接使用Promise（比如<code>Promise.resolve</code>之类的方法，虽然我不知道什么情况下我会不想让别人用，但姑且认为我不想让其他人用），我就可以加上这么一个配置：</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  globals<span class="token operator">:</span> <span class="token punctuation">{</span>
+    Promise<span class="token operator">:</span> <span class="token string">'off'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>这样，只要试图使用Promise，就会提示：</p> <div class="language- extra-class"><pre class="language-text"><code>ESLint: 'Promise' is not defined.(no-undef)
+</code></pre></div><p>需要注意的是，这里不能写成<code>false</code>，否则规则不会生效，<code>Promise</code>仍然是可用的。也由此可见，写成<code>true</code>的那种写法并没有什么正确性，仅仅是因为有了一个值而已。</p></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">5/25/2020, 4:55:11 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/2020-04/关于快乐数的一个猜想.html" class="prev">
+        关于快乐数的一个猜想
+      </a></span> <span class="next"><a href="/blogs/2020-05/pow函数有四样写法，你知道吗.html">
+        pow函数有四样写法，你知道吗
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1f794f11.js" defer></script><script src="/assets/js/2.266c3758.js" defer></script><script src="/assets/js/9.d2fee785.js" defer></script>
+  </body>
+</html>
