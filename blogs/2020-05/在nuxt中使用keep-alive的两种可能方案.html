@@ -7,7 +7,7 @@
     <meta name="generator" content="VuePress 1.5.0">
     <link rel="icon" href="/favicon.ico">
     <meta name="description" content="觉今是而昨非">
-    <link rel="preload" href="/assets/css/0.styles.8fbd8908.css" as="style"><link rel="preload" href="/assets/js/app.af0de8d1.js" as="script"><link rel="preload" href="/assets/js/2.266c3758.js" as="script"><link rel="preload" href="/assets/js/16.4d11de0f.js" as="script"><link rel="prefetch" href="/assets/js/10.a03b031e.js"><link rel="prefetch" href="/assets/js/11.09602ac2.js"><link rel="prefetch" href="/assets/js/12.9fa159a8.js"><link rel="prefetch" href="/assets/js/13.2f257f4f.js"><link rel="prefetch" href="/assets/js/14.936cbee5.js"><link rel="prefetch" href="/assets/js/15.369534b9.js"><link rel="prefetch" href="/assets/js/17.e16d2dc1.js"><link rel="prefetch" href="/assets/js/18.277886e1.js"><link rel="prefetch" href="/assets/js/19.449788e5.js"><link rel="prefetch" href="/assets/js/20.0420db13.js"><link rel="prefetch" href="/assets/js/21.607f9545.js"><link rel="prefetch" href="/assets/js/22.5b63ffdb.js"><link rel="prefetch" href="/assets/js/23.e0ac74b8.js"><link rel="prefetch" href="/assets/js/24.49820aba.js"><link rel="prefetch" href="/assets/js/3.0601f710.js"><link rel="prefetch" href="/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/assets/js/5.4c2d18ff.js"><link rel="prefetch" href="/assets/js/6.36d80060.js"><link rel="prefetch" href="/assets/js/7.9434fcd3.js"><link rel="prefetch" href="/assets/js/8.dcc8b782.js"><link rel="prefetch" href="/assets/js/9.a5403591.js">
+    <link rel="preload" href="/assets/css/0.styles.8fbd8908.css" as="style"><link rel="preload" href="/assets/js/app.b78f4d28.js" as="script"><link rel="preload" href="/assets/js/2.266c3758.js" as="script"><link rel="preload" href="/assets/js/16.480564cf.js" as="script"><link rel="prefetch" href="/assets/js/10.406cffc4.js"><link rel="prefetch" href="/assets/js/11.fb755fd2.js"><link rel="prefetch" href="/assets/js/12.9fa159a8.js"><link rel="prefetch" href="/assets/js/13.408b3a11.js"><link rel="prefetch" href="/assets/js/14.c37a522c.js"><link rel="prefetch" href="/assets/js/15.adfb6516.js"><link rel="prefetch" href="/assets/js/17.94ef0910.js"><link rel="prefetch" href="/assets/js/18.3ae9dbd4.js"><link rel="prefetch" href="/assets/js/19.5d1d0670.js"><link rel="prefetch" href="/assets/js/20.155a9b37.js"><link rel="prefetch" href="/assets/js/21.1b07ae4c.js"><link rel="prefetch" href="/assets/js/22.ba1f9211.js"><link rel="prefetch" href="/assets/js/23.c99b681c.js"><link rel="prefetch" href="/assets/js/24.0c4bf6b1.js"><link rel="prefetch" href="/assets/js/25.0d7c3044.js"><link rel="prefetch" href="/assets/js/3.d5d26c87.js"><link rel="prefetch" href="/assets/js/4.2b7fc900.js"><link rel="prefetch" href="/assets/js/5.2a2d8e1b.js"><link rel="prefetch" href="/assets/js/6.19e98492.js"><link rel="prefetch" href="/assets/js/7.3c769f48.js"><link rel="prefetch" href="/assets/js/8.dcc8b782.js"><link rel="prefetch" href="/assets/js/9.f13cf81a.js">
     <link rel="stylesheet" href="/assets/css/0.styles.8fbd8908.css">
   </head>
   <body>
@@ -75,7 +75,7 @@
         <span class="token punctuation">}</span><span class="token punctuation">,</span> cache<span class="token punctuation">.</span>expires<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-</code></pre></div><p>或者，可以维护一个队列或者栈，采用LRU之类的算法进行手动释放，我觉得都是可行的折中处理。</p> <p>总而言之，方案一的内存消耗较小，但是需要引入vuex，会增加加载时间（虽然gzip之后的vuex只有几K，但是蚊子腿也是肉，而且如果用CDN，CDN挂了呢？），并且会增加和外部的耦合，增加复杂度；方案二的内存消耗较大，但是不需要引入额外的库，耦合也比较小，内聚比较好。</p> <p>这是我目前的方案，只是起一个抛砖引玉的作用。如果有更好的方案，还请不吝赐教。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">5/25/2020, 4:55:11 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p>或者，可以维护一个队列或者栈，采用LRU之类的算法进行手动释放，我觉得都是可行的折中处理。</p> <p>总而言之，方案一的内存消耗较小，但是需要引入vuex，会增加加载时间（虽然gzip之后的vuex只有几K，但是蚊子腿也是肉，而且如果用CDN，CDN挂了呢？），并且会增加和外部的耦合，增加复杂度；方案二的内存消耗较大，但是不需要引入额外的库，耦合也比较小，内聚比较好。</p> <p>这是我目前的方案，只是起一个抛砖引玉的作用。如果有更好的方案，还请不吝赐教。</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">6/7/2020, 11:36:49 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/blogs/2020-05/前端可能用到的工具的代理设置方法.html" class="prev">
         前端可能用到的工具的代理设置方法
@@ -84,6 +84,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.af0de8d1.js" defer></script><script src="/assets/js/2.266c3758.js" defer></script><script src="/assets/js/16.4d11de0f.js" defer></script>
+    <script src="/assets/js/app.b78f4d28.js" defer></script><script src="/assets/js/2.266c3758.js" defer></script><script src="/assets/js/16.480564cf.js" defer></script>
   </body>
 </html>
