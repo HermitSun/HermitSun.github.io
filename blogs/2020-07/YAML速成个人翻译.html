@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>YAML速成个人翻译 | HermitSun</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="觉今是而昨非">
+    <link rel="preload" href="/assets/css/0.styles.9290d1e3.css" as="style"><link rel="preload" href="/assets/js/app.3a3ad155.js" as="script"><link rel="preload" href="/assets/js/2.3a15ce96.js" as="script"><link rel="preload" href="/assets/js/66.ee0b19ec.js" as="script"><link rel="preload" href="/assets/js/5.e3ef481a.js" as="script"><link rel="prefetch" href="/assets/js/10.a235a0ae.js"><link rel="prefetch" href="/assets/js/11.2efb6ac7.js"><link rel="prefetch" href="/assets/js/12.9bb19621.js"><link rel="prefetch" href="/assets/js/13.44ab7eb5.js"><link rel="prefetch" href="/assets/js/14.a05a4089.js"><link rel="prefetch" href="/assets/js/15.7845e31a.js"><link rel="prefetch" href="/assets/js/16.81074841.js"><link rel="prefetch" href="/assets/js/17.4a109de4.js"><link rel="prefetch" href="/assets/js/18.b3d6e215.js"><link rel="prefetch" href="/assets/js/19.44b91a7b.js"><link rel="prefetch" href="/assets/js/20.4e14c9ba.js"><link rel="prefetch" href="/assets/js/21.2e976702.js"><link rel="prefetch" href="/assets/js/22.e1f663b6.js"><link rel="prefetch" href="/assets/js/23.d9a8fec4.js"><link rel="prefetch" href="/assets/js/24.975c6db3.js"><link rel="prefetch" href="/assets/js/25.24869b60.js"><link rel="prefetch" href="/assets/js/26.e248d531.js"><link rel="prefetch" href="/assets/js/27.993f01ca.js"><link rel="prefetch" href="/assets/js/28.2f946c99.js"><link rel="prefetch" href="/assets/js/29.46ae65f4.js"><link rel="prefetch" href="/assets/js/3.7ec99bbf.js"><link rel="prefetch" href="/assets/js/30.49c82241.js"><link rel="prefetch" href="/assets/js/31.7f774843.js"><link rel="prefetch" href="/assets/js/32.1f779f41.js"><link rel="prefetch" href="/assets/js/33.88033166.js"><link rel="prefetch" href="/assets/js/34.e574a699.js"><link rel="prefetch" href="/assets/js/35.e12ceaaa.js"><link rel="prefetch" href="/assets/js/36.6154475a.js"><link rel="prefetch" href="/assets/js/37.2abacb14.js"><link rel="prefetch" href="/assets/js/38.a1c5fc84.js"><link rel="prefetch" href="/assets/js/39.6d953ccb.js"><link rel="prefetch" href="/assets/js/4.58f570ac.js"><link rel="prefetch" href="/assets/js/40.7731a55b.js"><link rel="prefetch" href="/assets/js/41.17b3e642.js"><link rel="prefetch" href="/assets/js/42.71b9f415.js"><link rel="prefetch" href="/assets/js/43.c94e0066.js"><link rel="prefetch" href="/assets/js/44.2cf78edb.js"><link rel="prefetch" href="/assets/js/45.72b8b7b1.js"><link rel="prefetch" href="/assets/js/46.017f8257.js"><link rel="prefetch" href="/assets/js/47.9b06c0ce.js"><link rel="prefetch" href="/assets/js/48.a11ec30a.js"><link rel="prefetch" href="/assets/js/49.d4eb6a7e.js"><link rel="prefetch" href="/assets/js/50.a1613e02.js"><link rel="prefetch" href="/assets/js/51.10df04cd.js"><link rel="prefetch" href="/assets/js/52.62de6e5b.js"><link rel="prefetch" href="/assets/js/53.eabb1a96.js"><link rel="prefetch" href="/assets/js/54.8531dbff.js"><link rel="prefetch" href="/assets/js/55.ae415fff.js"><link rel="prefetch" href="/assets/js/56.a3d5de01.js"><link rel="prefetch" href="/assets/js/57.3a0ea5cc.js"><link rel="prefetch" href="/assets/js/58.025811ce.js"><link rel="prefetch" href="/assets/js/59.ab93fd51.js"><link rel="prefetch" href="/assets/js/6.34743fed.js"><link rel="prefetch" href="/assets/js/60.cb9deece.js"><link rel="prefetch" href="/assets/js/61.35ade436.js"><link rel="prefetch" href="/assets/js/62.4658e958.js"><link rel="prefetch" href="/assets/js/63.78227914.js"><link rel="prefetch" href="/assets/js/64.b93d77a5.js"><link rel="prefetch" href="/assets/js/65.dfdf4703.js"><link rel="prefetch" href="/assets/js/67.a0c96769.js"><link rel="prefetch" href="/assets/js/68.acb40359.js"><link rel="prefetch" href="/assets/js/69.81a50e6c.js"><link rel="prefetch" href="/assets/js/7.3a4eae18.js"><link rel="prefetch" href="/assets/js/70.78f3a945.js"><link rel="prefetch" href="/assets/js/71.ca834cdd.js"><link rel="prefetch" href="/assets/js/72.3f812ed2.js"><link rel="prefetch" href="/assets/js/73.a6466013.js"><link rel="prefetch" href="/assets/js/74.831fb4f1.js"><link rel="prefetch" href="/assets/js/75.52ed2517.js"><link rel="prefetch" href="/assets/js/76.d5edacaf.js"><link rel="prefetch" href="/assets/js/77.072f6dc3.js"><link rel="prefetch" href="/assets/js/78.087b9566.js"><link rel="prefetch" href="/assets/js/8.99fff733.js"><link rel="prefetch" href="/assets/js/9.5bfec8f1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9290d1e3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">HermitSun</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/friends/" class="nav-link">
+  Friends
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Contact" class="dropdown-title"><span class="title">Contact</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.yuque.com/yunwuxin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/u/hermitsun/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blogs/" class="nav-link router-link-active">
+  Blogs
+</a></div><div class="nav-item"><a href="/notes/" class="nav-link">
+  Notes
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About
+</a></div><div class="nav-item"><a href="/friends/" class="nav-link">
+  Friends
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Contact" class="dropdown-title"><span class="title">Contact</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/HermitSun" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  CSDN
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.yuque.com/yunwuxin" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  语雀
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://leetcode-cn.com/u/hermitsun/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  LeetCode
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2019-08/" class="sidebar-heading clickable"><span>2019-08</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2019-12/" class="sidebar-heading clickable"><span>2019-12</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-02/" class="sidebar-heading clickable"><span>2020-02</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-04/" class="sidebar-heading clickable"><span>2020-04</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-05/" class="sidebar-heading clickable"><span>2020-05</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-06/" class="sidebar-heading clickable"><span>2020-06</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/blogs/2020-07/" class="sidebar-heading clickable router-link-active open"><span>2020-07</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blogs/2020-07/AttributeError module 'nltk' has no attribute 'download'的可能解决办法.html" class="sidebar-link">AttributeError: module 'nltk' has no attribute 'download'的可能解决办法</a></li><li><a href="/blogs/2020-07/C++使用greater报错'this' argument has type 'const Point', but method is not marked const的解决方案.html" class="sidebar-link">C++使用greater报错'this' argument has type 'const xxx', but method is not marked const的解决方案</a></li><li><a href="/blogs/2020-07/deno报错error trying to connect invalid dnsname的可能解决办法.html" class="sidebar-link">deno报错error trying to connect: invalid dnsname的可能解决办法</a></li><li><a href="/blogs/2020-07/ImportError cannot import name 'deprecated' from 'nltk.internals'的可能解决办法.html" class="sidebar-link">ImportError: cannot import name 'deprecated' from 'nltk.internals'的可能解决办法</a></li><li><a href="/blogs/2020-07/tkinter canvas + PIL渲染图片不显示的可能解决办法.html" class="sidebar-link">tkinter canvas + PIL渲染图片不显示的可能解决办法</a></li><li><a href="/blogs/2020-07/vue-router URL里存在锚点导致不能正常跳转的可能解决办法.html" class="sidebar-link">vue-router URL里存在锚点导致不能再次跳转的可能解决办法</a></li><li><a href="/blogs/2020-07/YAML速成个人翻译.html" class="active sidebar-link">YAML速成个人翻译</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blogs/2020-07/YAML速成个人翻译.html#译序" class="sidebar-link">译序</a></li><li class="sidebar-sub-header"><a href="/blogs/2020-07/YAML速成个人翻译.html#正文" class="sidebar-link">正文</a></li><li class="sidebar-sub-header"><a href="/blogs/2020-07/YAML速成个人翻译.html#更多资源" class="sidebar-link">更多资源</a></li><li class="sidebar-sub-header"><a href="/blogs/2020-07/YAML速成个人翻译.html#译注" class="sidebar-link">译注</a></li></ul></li><li><a href="/blogs/2020-07/[LeetCode 404] 使用标志位与不使用标志位两种解法.html" class="sidebar-link">[LeetCode 404] 使用标志位与不使用标志位两种解法</a></li><li><a href="/blogs/2020-07/[LeetCode 5] 反转原字符串后使用滑动窗口.html" class="sidebar-link">[LeetCode 5] 反转原字符串后使用滑动窗口</a></li><li><a href="/blogs/2020-07/[LeetCode 64] 四种思路，三种可行.html" class="sidebar-link">[LeetCode 64] 四种思路，三种可行</a></li><li><a href="/blogs/2020-07/在JavaScript  TypeScript中使用栈——几种栈的使用方法.html" class="sidebar-link">在JavaScript / TypeScript中使用栈——几种栈的使用方法</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/notes/需求与商业模式创新/" class="sidebar-heading clickable"><span>需求与商业模式创新</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="yaml速成个人翻译"><a href="#yaml速成个人翻译" class="header-anchor">#</a> YAML速成个人翻译</h1> <h2 id="译序"><a href="#译序" class="header-anchor">#</a> 译序</h2> <p>学习circle-ci的用法时，无意中在网上看到了这个教程，拜读<a href="https://learnxinyminutes.com/docs/yaml/" target="_blank" rel="noopener noreferrer">英文版<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 之后觉得实在不错，就动了翻译的心思。可惜的是，已经有了中文翻译。不过这个翻译让人实在不满意，于是我重新翻译了一遍，希望能像YAML一样，“让人类可写可读”。</p> <p>2020.07.27</p> <p>于家中</p> <h2 id="正文"><a href="#正文" class="header-anchor">#</a> 正文</h2> <p>YAML 是一种数据序列化语言，旨在让人类直接可写可读。</p> <p>它是 JSON 的严格超集，增加了<em>在语法上有意义的</em>（syntactically significant，参见译注1）换行符和缩进，就像Python一样。但和Python的不同之处在于，YAML不允许使用<em>文字制表符</em>（literal tab characters）来表示缩进。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">---</span>  <span class="token comment"># 文档开头</span>
+
+<span class="token comment"># YAML 中的注释看起来像这样。</span>
+
+<span class="token comment">################</span>
+<span class="token comment"># 标量类型     #</span>
+<span class="token comment">################</span>
+
+<span class="token comment"># 我们的根对象 (贯穿整个文档的始终) 是一个映射（map），</span>
+<span class="token comment"># 它等价于其它语言中的一个字典（dictionary），哈希表（hash）或对象（object）。</span>
+<span class="token key atrule">key</span><span class="token punctuation">:</span> value
+<span class="token key atrule">another_key</span><span class="token punctuation">:</span> Another value goes here.
+<span class="token key atrule">a_number_value</span><span class="token punctuation">:</span> <span class="token number">100</span>
+<span class="token comment"># 数字 1 会被解释为数值，而不是一个布尔值。</span>
+<span class="token comment"># 如果你想要的是一个布尔值，使用 true。</span>
+<span class="token key atrule">scientific_notation</span><span class="token punctuation">:</span> <span class="token number">1e+12</span>
+<span class="token key atrule">boolean</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token key atrule">null_value</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+key with spaces<span class="token punctuation">:</span> value
+<span class="token comment"># 注意，字符串可以不括在引号里。当然，也可以括在引号里。</span>
+<span class="token key atrule">however</span><span class="token punctuation">:</span> <span class="token string">'A string, enclosed in quotes.'</span>
+'Keys can be quoted too.'<span class="token punctuation">:</span> <span class="token string">&quot;Useful if you want to put a ':' in your key.&quot;</span>
+single quotes<span class="token punctuation">:</span> 'have ''one'' escape pattern'
+double quotes<span class="token punctuation">:</span> <span class="token string">&quot;have many: \&quot;, \0, \t, \u263A, \x0d\x0a == \r\n, and more.&quot;</span>
+<span class="token comment"># UTF-8/16/32字符需要指明编码（通过\u）。</span>
+<span class="token comment"># 参见译注2。</span>
+Superscript two<span class="token punctuation">:</span> \u00B2
+
+<span class="token comment"># 多行字符串既可以写成一个'字面量块'(使用 '|')，</span>
+<span class="token comment"># 也可以写成一个'折叠块'(使用 '&gt;')。</span>
+<span class="token comment"># 参见译注3。</span>
+<span class="token key atrule">literal_block</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    This entire block of text will be the value of the 'literal_block' key,
+    with line breaks being preserved.</span>
+
+    The literal continues until de<span class="token punctuation">-</span>dented<span class="token punctuation">,</span> and the leading indentation is
+    stripped.
+
+        Any lines that are 'more<span class="token punctuation">-</span>indented' keep the rest of their indentation <span class="token punctuation">-</span>
+        these lines will be indented by 4 spaces.
+<span class="token key atrule">folded_style</span><span class="token punctuation">:</span> <span class="token punctuation">&gt;</span><span class="token scalar string">
+    This entire block of text will be the value of 'folded_style', but this
+    time, all newlines will be replaced with a single space.</span>
+
+    Blank lines<span class="token punctuation">,</span> like above<span class="token punctuation">,</span> are converted to a newline character.
+
+        'More<span class="token punctuation">-</span>indented' lines keep their newlines<span class="token punctuation">,</span> too <span class="token punctuation">-</span>
+        this text will appear over two lines.
+
+<span class="token comment">####################</span>
+<span class="token comment"># 集合类型         #</span>
+<span class="token comment">####################</span>
+
+<span class="token comment"># 嵌套是通过缩进完成的。推荐使用2个空格的缩进（但非必须）。</span>
+<span class="token key atrule">a_nested_map</span><span class="token punctuation">:</span>
+  <span class="token key atrule">key</span><span class="token punctuation">:</span> value
+  <span class="token key atrule">another_key</span><span class="token punctuation">:</span> Another Value
+  <span class="token key atrule">another_nested_map</span><span class="token punctuation">:</span>
+    <span class="token key atrule">hello</span><span class="token punctuation">:</span> hello
+
+<span class="token comment"># 映射的键不必是字符串。</span>
+<span class="token key atrule">0.25</span><span class="token punctuation">:</span> a float key
+
+<span class="token comment"># 键也可以是复合（complex）的，比如多行对象</span>
+<span class="token comment"># 我们用'?'后跟一个空格来表示一个复合键的开始。</span>
+<span class="token punctuation">?</span> <span class="token punctuation">|</span>
+  This is a key
+  that has multiple lines
+<span class="token punctuation">:</span> and this is its value
+
+<span class="token comment"># YAML也允许使用复合键语法表示序列间的映射关系。</span>
+<span class="token comment"># 但有些解析器可能会不支持。</span>
+<span class="token comment"># 一个例子：</span>
+<span class="token punctuation">?</span> <span class="token punctuation">-</span> Manchester United
+  <span class="token punctuation">-</span> Real Madrid
+<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token datetime number">2001-01-01</span><span class="token punctuation">,</span> <span class="token datetime number">2002-02-02</span> <span class="token punctuation">]</span>
+
+<span class="token comment"># 序列 (sequences，等价于列表list或数组array) 看起来像这样</span>
+<span class="token comment"># 注意 '-' 代表缩进：</span>
+<span class="token key atrule">a_sequence</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> Item 1
+  <span class="token punctuation">-</span> Item 2
+  <span class="token punctuation">-</span> <span class="token number">0.5</span> <span class="token comment"># 序列可以包含不同类型。</span>
+  <span class="token punctuation">-</span> Item 4
+  <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> value
+    <span class="token key atrule">another_key</span><span class="token punctuation">:</span> another_value
+  <span class="token punctuation">-</span>
+    <span class="token punctuation">-</span> This is a sequence
+    <span class="token punctuation">-</span> inside another sequence
+  <span class="token punctuation">-</span> <span class="token punctuation">-</span> <span class="token punctuation">-</span> Nested sequence indicators
+      <span class="token punctuation">-</span> can be collapsed
+
+<span class="token comment"># 因为YAML是JSON的超集，你也可以写JSON风格的映射和序列：</span>
+<span class="token key atrule">json_map</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">&quot;key&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;value&quot;</span><span class="token punctuation">}</span>
+<span class="token key atrule">json_seq</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;takeoff&quot;</span><span class="token punctuation">]</span>
+and quotes are optional<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token key atrule">key</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> takeoff<span class="token punctuation">]</span><span class="token punctuation">}</span>
+
+<span class="token comment">#######################</span>
+<span class="token comment"># 其余的 YAML 特性    #</span>
+<span class="token comment">#######################</span>
+
+<span class="token comment"># YAML 还有一个方便的特性叫“锚”（anchors）。你可以使用它在文档中轻松地完成文本复用。</span>
+<span class="token comment"># 如下两个键会有相同的值：</span>
+<span class="token key atrule">anchored_content</span><span class="token punctuation">:</span> <span class="token important">&amp;anchor_name</span> This string will appear as the value of two keys.
+<span class="token key atrule">other_anchor</span><span class="token punctuation">:</span> <span class="token important">*anchor_name</span>
+
+<span class="token comment"># 锚也可被用来复制/继承属性</span>
+<span class="token key atrule">base</span><span class="token punctuation">:</span> <span class="token important">&amp;base</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> Everyone has same name
+
+<span class="token comment"># '&lt;&lt;'称为语言无关的合并键类型（Merge Key Language-Independent Type）.</span>
+<span class="token comment"># 它表明一个或多个指定映射中的所有键值会插入到当前的映射中。</span>
+<span class="token comment"># 参见译注4。</span>
+
+<span class="token key atrule">foo</span><span class="token punctuation">:</span> <span class="token important">&amp;foo</span>
+  <span class="token key atrule">&lt;&lt;</span><span class="token punctuation">:</span> <span class="token important">*base</span>
+  <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">10</span>
+
+<span class="token key atrule">bar</span><span class="token punctuation">:</span> <span class="token important">&amp;bar</span>
+  <span class="token key atrule">&lt;&lt;</span><span class="token punctuation">:</span> <span class="token important">*base</span>
+  <span class="token key atrule">age</span><span class="token punctuation">:</span> <span class="token number">20</span>
+
+<span class="token comment"># foo 和 bar 将都含有 name: Everyone has same name</span>
+
+<span class="token comment"># YAML 还有标签（tags），你可以用它显式地声明类型。</span>
+<span class="token key atrule">explicit_string</span><span class="token punctuation">:</span> <span class="token tag">!!str</span> <span class="token number">0.5</span>
+<span class="token comment"># 一些解析器实现了特定语言的标签，就像这个针对Python的复数类型的标签。</span>
+<span class="token key atrule">python_complex_number</span><span class="token punctuation">:</span> <span class="token tag">!!python/complex</span> 1+2j
+
+<span class="token comment"># 我们也可以在YAML的复合键中使用特定语言的标签：</span>
+<span class="token punctuation">?</span> <span class="token tag">!!python/tuple</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+<span class="token punctuation">:</span> Fifty Seven
+<span class="token comment"># 将会是Python中的 {(5, 7): 'Fifty Seven'}</span>
+
+<span class="token comment">####################</span>
+<span class="token comment"># 其余的 YAML 类型 #</span>
+<span class="token comment">####################</span>
+
+<span class="token comment"># 除了字符串和数字，YAML还支持其它标量。</span>
+<span class="token comment"># ISO格式的日期和时间字面量也可以被解析。</span>
+<span class="token key atrule">datetime</span><span class="token punctuation">:</span> <span class="token datetime number">2001-12-15T02:59:43.1Z</span>
+<span class="token key atrule">datetime_with_spaces</span><span class="token punctuation">:</span> <span class="token datetime number">2001-12-14 21:59:43.10 -5</span>
+<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2002-12-14</span>
+
+<span class="token comment"># 这个 !!binary 标签表明这个字符串实际上</span>
+<span class="token comment"># 是一个用base64编码表示的二进制blob。</span>
+<span class="token key atrule">gif_file</span><span class="token punctuation">:</span> <span class="token tag">!!binary</span> <span class="token punctuation">|</span><span class="token scalar string">
+  R0lGODlhDAAMAIQAAP//9/X17unp5WZmZgAAAOfn515eXvPz7Y6OjuDg4J+fn5
+  OTk6enp56enmlpaWNjY6Ojo4SEhP/++f/++f/++f/++f/++f/++f/++f/++f/+
+  +f/++f/++f/++f/++f/++SH+Dk1hZGUgd2l0aCBHSU1QACwAAAAADAAMAAAFLC
+  AgjoEwnuNAFOhpEMTRiggcz4BNJHrv/zCFcLiwMWYNG84BwwEeECcgggoBADs=</span>
+
+<span class="token comment"># YAML还有一个集合（set）类型，它看起来像这样：</span>
+<span class="token key atrule">set</span><span class="token punctuation">:</span>
+  <span class="token punctuation">?</span> item1
+  <span class="token punctuation">?</span> item2
+  <span class="token punctuation">?</span> item3
+<span class="token key atrule">or</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>item1<span class="token punctuation">,</span> item2<span class="token punctuation">,</span> item3<span class="token punctuation">}</span>
+
+<span class="token comment"># 集合只是值均为null的映射；上面的集合等价于：</span>
+<span class="token key atrule">set2</span><span class="token punctuation">:</span>
+  <span class="token key atrule">item1</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+  <span class="token key atrule">item2</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+  <span class="token key atrule">item3</span><span class="token punctuation">:</span> <span class="token null important">null</span>
+
+<span class="token punctuation">...</span>  <span class="token comment"># 文档结束</span>
+</code></pre></div><h2 id="更多资源"><a href="#更多资源" class="header-anchor">#</a> 更多资源</h2> <ul><li><a href="http://yaml.org/" target="_blank" rel="noopener noreferrer">YAML official website<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="http://codebeautify.org/yaml-validator" target="_blank" rel="noopener noreferrer">Online YAML Validator<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <h2 id="译注"><a href="#译注" class="header-anchor">#</a> 译注</h2> <ol><li><p>原文为'syntactically significant newlines and indentation'，原译为“语法显著换行符和缩进”。
+个人认为，significant在此处应为“有意义的”，而非“显著的”。联系上下文，此处应指YAML的换行和缩进具有语法含义，而非在语法上显著（虽然确实很醒目）。
+故译为“在语法上有意义的换行符和缩进”。</p></li> <li><p>原文为'UTF-8/16/32 characters need to be encoded'，原译为“UTF-8/16/32 字符需要被转义”。个人认为，“转义”应为escape，并且虽然\u本身是一个转义字符，但目的是为了表明编码。
+故译为“UTF-8/16/32字符需要指明编码”。</p></li> <li><p>“字面量块”即'literal block'，此处取literal的“字面”之意。
+从下文也可以看到，字面量块会保留原字符串，包括换行等特殊字符；而折叠块会把原字符串的每一行用空格分隔，然后合并到同一行。</p></li> <li><p>原文为'The regexp &lt;&lt; is called Merge Key Language-Independent Type.'。若regexp直译为正则表达式，似有不妥，故在尽量保留含义的基础上有所省略。</p></li></ol> <div class="gitalk-container"><div id="gitalk-container"></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新于:</span> <span class="time">7/27/2020, 10:44:51 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blogs/2020-07/vue-router URL里存在锚点导致不能正常跳转的可能解决办法.html" class="prev">
+        vue-router URL里存在锚点导致不能再次跳转的可能解决办法
+      </a></span> <span class="next"><a href="/blogs/2020-07/[LeetCode 404] 使用标志位与不使用标志位两种解法.html">
+        [LeetCode 404] 使用标志位与不使用标志位两种解法
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.3a3ad155.js" defer></script><script src="/assets/js/2.3a15ce96.js" defer></script><script src="/assets/js/66.ee0b19ec.js" defer></script><script src="/assets/js/5.e3ef481a.js" defer></script>
+  </body>
+</html>
